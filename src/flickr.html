@@ -1,12 +1,71 @@
+<style>
+  .body {
+
+    height: 380px;
+  }
+  .fwm_button {
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.38);
+    border: 1px outset;
+    border-top-color: rgba(0, 0, 0, 0.32);
+    border-left-color: rgba(0, 0, 0, 0.46);
+    border-right-color: rgba(0, 0, 0, 0.46);
+    border-bottom-color: rgba(0, 0, 0, 0.46);
+  }
+</style>
 <template>
-  <section class="au-animate">
-      <h2>${heading}</h2>
-      <div class="row au-stagger">
-        <div class="col-sm-6 col-md-3 flickr-img au-animate" repeat.for="image of images">
-          <a class="thumbnail">
-            <img src.bind="image.media.m"/>
-          </a>
+  <section>
+
+<!---->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="jumbotron">
+            <h2>
+              Hello, ${heading} & Auriela!
+            </h2>
+
+            <p>
+              This is the modified skeleton-nav system. This uses proportional images, thumbnails and an image viewer (just click on a thumb).
+            </p>
+
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-2" repeat.for="image of images">
+              <button class="btn fwm_button" click.delegate="$parent.loadimage(image.media.m)"><img style="width: 60px; height: 60px;" src.bind="image.media.m" ></button>
+            </div>
+            <div class="col-md-10">
+              <div class="row">
+                <div class="col-md-12">
+                  <img style="width: 400px; height: auto;" src.bind="selectedImage"/>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="row body">
+            <div class="col-sm-6 col-md-3" repeat.for="image of images">
+              <a class="thumbnail body">
+                <!--<img style="width: 260px; height: 180px;" src.bind="image.media.m"/>-->
+                <img style="width: 260px; height: auto;" src.bind="image.media.m"/>
+              </a>
+            </div>
+          </div>
+
+
         </div>
       </div>
+    </div>
+    </div>
+
+
+
+
   </section>
 </template>
+
