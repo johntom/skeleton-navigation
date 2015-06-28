@@ -46,9 +46,10 @@ To run the app, follow these steps.
 ```html
 <script src="jspm_packages/github/webcomponents/webcomponentsjs@0.5.2/HTMLImports.js"></script>
 ```
-#Addtions for this repo
+
+8. Addtions for this repo
 ##jspm install bootstrap
-##replace \jspm_packages\github\twbs\bootstrap@3.3.5\css\bootstrap.css with any free bootswatch theme http://bootswatch.com/
+##replace \jspm_packages\github\twbs\bootstrap@3.3.5\css\bootstrap.css with any free bootswatch theme http://bootswatch.com/ (i used http://bootswatch.com/cyborg/)
 
 
 ## Running The Unit Tests
